@@ -33,7 +33,7 @@ group :development, :test do
   gem 'launchy'
   gem 'meta_request'
   gem 'pry-rails'
-  gem 'rb-fsevent' if `uname` =~ /Darwin/
+  gem 'rb-fsevent'
   gem 'rspec-rails'
   gem 'spring-commands-rspec'
   gem 'terminal-notifier-guard'
