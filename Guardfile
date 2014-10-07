@@ -2,7 +2,7 @@
 # More info at https://github.com/guard/guard#readme
 
 
-guard 'spring', cmd: 'spring rspec' do
+guard 'rspec', cmd: 'spring rspec' do
   watch(%r{^spec/.+_spec\.rb$})
   watch(%r{^spec/spec_helper\.rb$})                   { |m| 'spec' }
   watch(%r{^app/(.+)\.rb$})                           { |m| "spec/#{m[1]}_spec.rb" }

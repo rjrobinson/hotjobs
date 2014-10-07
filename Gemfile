@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'autoprefixer-rails'
 gem 'coffee-rails', '~> 4.0.0'
+gem 'font-awesome-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'pg'
@@ -11,11 +13,8 @@ gem 'simple_form'
 gem 'spring',        group: :development
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
+gem 'bootstrap-sass'
 
-
-group :assets do
-  gem 'bootstrap-sass'
-end
 
 #######################
 #DEVELOPMENT TEST GEMS#
