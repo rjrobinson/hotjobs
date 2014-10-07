@@ -1,5 +1,11 @@
 <%= simple_form_for @incident do |f| %>
-  <%= f.input :incident_type_id %>
+  <%= f.association :incident_type %>
   <%= f.input :description %>
+  <%= f.input :location_street %>
+  <%= f.input :location_city %>
+  <%= f.input :location_state %>
+  <%= f.input :location_zip %>
+
+
   <%= f.button :submit %>
 <% end  %>

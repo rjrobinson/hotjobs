@@ -1,5 +1,5 @@
 class Incident < ActiveRecord::Base
-  has_one :incident_type
+  has_many :incident_type
 
 
 end
