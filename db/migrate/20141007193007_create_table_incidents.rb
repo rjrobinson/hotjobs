@@ -5,10 +5,7 @@ class CreateTableIncidents < ActiveRecord::Migration
       t.text    :description
       t.integer :user_id,           null: false
       t.integer :incident_type_id,  null: false
-      t.string  :address
-      t.string  :city
-      t.string  :state
-      t.integer :zipcode
+      t.string  :address,           null: false
 
       t.timestamps
     end
