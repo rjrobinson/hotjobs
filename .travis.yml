@@ -1,0 +1,6 @@
+# travis CI
+language: ruby
+rvm:
+  - 2.1.0
+before_script:
+  - psql -c 'create database hot_jobs_test;' -U postgres

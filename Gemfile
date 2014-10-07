@@ -12,6 +12,15 @@ gem 'spring',        group: :development
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
+
+group :assets do
+end
+
+#######################
+#DEVELOPMENT TEST GEMS#
+#######################
+
+
 group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
@@ -20,6 +29,7 @@ group :development, :test do
   gem 'growl'
   gem 'guard-rspec'
   gem 'guard-spring'
+  gem 'launchy'
   gem 'meta_request'
   gem 'pry-rails'
   gem 'rb-fsevent' if `uname` =~ /Darwin/
@@ -28,5 +38,7 @@ group :development, :test do
   gem 'terminal-notifier-guard'
 end
 
-group :assets do
+
+group :test do
+  gem 'coveralls', require: false
 end
