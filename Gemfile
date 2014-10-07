@@ -14,6 +14,7 @@ gem 'uglifier', '>= 1.3.0'
 
 
 group :assets do
+  gem 'bootstrap-sass'
 end
 
 #######################
