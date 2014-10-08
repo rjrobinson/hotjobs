@@ -1,0 +1,9 @@
+<div class='well well-lg'
+  <%= simple_form_for @incident do |f| %>
+    <%= f.association :incident_types %>
+    <%= f.input :description, hint: 'Please limit description to 100 characters' %>
+    <%= f.input :address, hint: '123 Broadway City, State Zip' %>
+
+    <%= f.button :submit %>
+  <% end  %>
+</div>
