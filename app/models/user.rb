@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
       super
     end
 
-    def pasword_required?
+    def password_required?
       super && provider.blank?
     end
 
