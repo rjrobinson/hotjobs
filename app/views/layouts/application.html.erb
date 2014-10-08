@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Hot Jobs, k </title>
+  <title>Incident Notification System</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 <!-- ADD NAV BAR HERE -->
-  <div class='container'>
+  <div class='container-fluid'>
+
+    <%= render 'layouts/nav_bar' %>
     <%= render "layouts/flash"%>
   </div>
     <%= yield %>

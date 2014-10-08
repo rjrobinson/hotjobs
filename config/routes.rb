@@ -1,7 +1,13 @@
 require "resque_web"
 Rails.application.routes.draw do
 
-  root 'incidents#index'
+  devise_for :users, controllers: { omniauth_callbacks: 'omniauth_callbacks' }
+
+
+
+
+
+  root 'incidents#welcome'
   resources :incidents, only: [ :index, :new, :create, :show ]
 
 

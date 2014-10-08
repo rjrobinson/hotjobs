@@ -6,7 +6,7 @@ class Incident < ActiveRecord::Base
 
   validates :address, presence: true
   validates :name, presence: true
-  validates :longitude, presence: true, length: { minniumn: 1, maximnum: 6   }
-  validates :latitude, presence: true, length: { minniumn: 1, maximnum: 6   }
+  validates :longitude, presence: true, length: { minimum: 1, maximnum: 6   }
+  validates :latitude, presence: true, length: { minimum: 1, maximnum: 6   }
 
 end

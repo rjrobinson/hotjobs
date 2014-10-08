@@ -1,5 +1,5 @@
 class IncidentsController < ApplicationController
-
+before_filter :authenticate_user! , except: [ :welcome ]
   def index
   end
 
@@ -17,6 +17,9 @@ class IncidentsController < ApplicationController
   end
 
   def show
+  end
+
+  def welcome
   end
 
 
