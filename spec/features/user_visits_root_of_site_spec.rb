@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-feature 'User add incident to site', %Q(
+feature 'User visits site', %Q(
 
   As a User
-  I want to be able to report an emergency to other responders
+  I want go to a site that allows responders to report ongong jobs
   So that we are informed as to what is going on in the area.
 
   ) do
