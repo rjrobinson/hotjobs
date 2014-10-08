@@ -2,7 +2,7 @@ require "resque_web"
 Rails.application.routes.draw do
 
   root 'incidents#index'
-  resources :incidents, only: [ :index, :new ]
+  resources :incidents, only: [ :index, :new, :create, :show ]
 
 
 
