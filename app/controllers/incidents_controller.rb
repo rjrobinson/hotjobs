@@ -8,16 +8,17 @@ before_filter :authenticate_user! , except: [ :welcome ]
   end
 
   def create
-    binding.pry
     @incident = Incident.new(incident_params)
+    @incident.user = current_user
     if @incident.save
-      redirect_to root_path, notice: 'Incident Added!'
+      redirect_to @incident, notice: 'Incident Added!'
     else
       render :new, notice: 'There was an error.'
     end
   end
 
   def show
+    @incident = Incident.find(params[:id])
   end
 
   def welcome
@@ -29,7 +30,7 @@ before_filter :authenticate_user! , except: [ :welcome ]
     params.require(:incident).permit(
       :address,
       :description,
-      :incident_type
+      :incident_type_id
     )
   end
 

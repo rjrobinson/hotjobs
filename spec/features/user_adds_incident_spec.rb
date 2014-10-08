@@ -17,10 +17,12 @@ feature 'User can add an incident' do
     visit new_incident_path
 
     select 'Fire', from: "Incident type"
-    fill_in 'Description', with: 'This is a really MASSIVE fire'
+    fill_in 'Description', with: 'This is a really MASSIVE FIRE'
     fill_in 'Address', with: '33 Harrison Ave Boston, MA'
 
     click_button 'Create Incident'
     expect(page).to have_content('Incident Added!')
+    expect(page).to have_content('MASSIVE FIRE')
+    save_and_open_page
   end
 end

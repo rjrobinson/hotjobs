@@ -26,8 +26,6 @@ gem 'uglifier', '>= 1.3.0'
 
 
 group :development, :test do
-  gem 'better_errors'
-  gem 'binding_of_caller'
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'growl'
@@ -43,6 +41,10 @@ group :development, :test do
   gem 'dotenv-rails'
 end
 
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
 
 group :test do
   gem 'coveralls', require: false
