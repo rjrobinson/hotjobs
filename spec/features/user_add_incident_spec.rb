@@ -11,6 +11,10 @@ feature 'User add incident to site', %Q(
     scenario 'user add incident into site ' do
 
       visit root_path
+
+      click_on 'Sign in'
+
+      
   end
 
 end
