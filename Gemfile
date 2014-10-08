@@ -3,10 +3,12 @@ source 'https://rubygems.org'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'coffee-rails', '~> 4.0.0'
+gem 'devise'
 gem 'font-awesome-rails'
 gem 'geocoder'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
+gem 'omniauth-twitter'
 gem 'pg'
 gem 'rails', '4.1.6'
 gem 'resque'
@@ -17,8 +19,6 @@ gem 'simple_form'
 gem 'spring',        group: :development
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
-gem 'devise'
-gem 'omniauth-twitter'
 
 #######################
 #DEVELOPMENT TEST GEMS#
@@ -40,6 +40,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'spring-commands-rspec'
   gem 'terminal-notifier-guard'
+  gem 'dotenv-rails'
 end
 
 
