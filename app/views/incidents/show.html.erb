@@ -4,7 +4,7 @@
 </p>
 <div>
   <%= simple_form_for [@incident, @update] do |f| %>
-    <%= f.input :body, 'Send Update:' %>
-    <%= f.submit 'Update', class: 'btn'%>
+    <%= f.input :body, label: 'Update:' %>
+    <%= f.submit 'Send', class: 'btn'%>
   <% end  %>
 </div>

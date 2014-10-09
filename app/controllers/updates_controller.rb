@@ -9,7 +9,7 @@ class UpdatesController < ApplicationController
       if @update.save
         redirect_to @incident, notice: 'Update reported.'
       else
-        reditect_to @incident, notice: 'Not Updated. There was an error.'
+        redirect_to @incident, notice: 'No Update. There was an error.'
       end
   end
 
