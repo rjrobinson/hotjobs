@@ -6,7 +6,10 @@ Rails.application.routes.draw do
 
   root 'incidents#welcome'
 
-  resources :incidents
+  resources :incidents do
+    resources :updates
+  end
+
   resources :users
 
 

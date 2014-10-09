@@ -1,3 +1,10 @@
 <p>
   <%= @incident.description %>
+  <%= link_to 'Delete', incident_path(@incident), method: :delete, class: 'btn btn-danger' %>
 </p>
+<div>
+  <%= simple_form_for [@incident, @update] do |f| %>
+    <%= f.input :body, 'Send Update:' %>
+    <%= f.submit 'Update', class: 'btn'%>
+  <% end  %>
+</div>

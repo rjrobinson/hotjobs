@@ -1,11 +1,11 @@
 require 'rails_helper'
 
-feature 'User can add an incident' do
+feature 'User can update an incident' do
   let!(:incident_type){FactoryGirl.create(:incident_type)}
   let(:user){FactoryGirl.create(:user)}
+  let(:incident){factoryGirl.create(:incident)}
 
-
-  scenario 'user add incident' do
+  scenario 'user adds update to incident', focus: true do
     sign_in_as user
     visit new_incident_path
 
@@ -14,7 +14,12 @@ feature 'User can add an incident' do
     fill_in 'Address', with: '33 Harrison Ave Boston, MA'
 
     click_button 'Create Incident'
-    expect(page).to have_content('Incident Added!')
-    expect(page).to have_content('MASSIVE FIRE')
+    
+    fill_in 'Body', with: 'Sample update information.'
+
+    click_button 'Update'
+
+    expect(page).to have_content('Update reported.')
+    save_and_open_page
   end
 end

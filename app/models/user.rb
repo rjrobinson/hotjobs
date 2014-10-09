@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   devise :omniauthable, :omniauth_providers => [:twitter]
 
   has_many :incidents
+  has_many :users
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create

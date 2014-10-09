@@ -1,6 +1,8 @@
 class IncidentsController < ApplicationController
 before_filter :authenticate_user! , except: [ :welcome ]
+
   def index
+    @incidents = Incidents.all
   end
 
   def new
@@ -10,6 +12,7 @@ before_filter :authenticate_user! , except: [ :welcome ]
   def create
     @incident = Incident.new(incident_params)
     @incident.user = current_user
+
     if @incident.save
       redirect_to @incident, notice: 'Incident Added!'
     else
@@ -19,7 +22,18 @@ before_filter :authenticate_user! , except: [ :welcome ]
 
   def show
     @incident = Incident.find(params[:id])
+    @update = Update.new
   end
+
+  def destroy
+    @incident = Incident.find(params[:id])
+    @incident.destroy
+
+    flash[:success] = "Incident has been deleted"
+
+    redirect_to root_path
+  end
+
 
   def welcome
   end
