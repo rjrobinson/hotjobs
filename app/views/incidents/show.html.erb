@@ -1,7 +1,17 @@
-<p>
+<div>
   <%= @incident.description %>
-  <%= link_to 'Delete', incident_path(@incident), method: :delete, class: 'btn btn-danger' %>
-</p>
+  <div>
+    <%= link_to 'Delete', incident_path(@incident), method: :delete, class: 'btn btn-danger' %>
+  </div>
+</div>
+<!--  view updates -->
+<div>
+  <% @updates.each do |update| %>
+    <%= update.body %>
+    <p>updated snet at:<%= update.created_at %> || by user #<%= update.user_id %></p>
+    <% end %>
+</div>
+<!--  add update -->
 <div>
   <%= simple_form_for [@incident, @update] do |f| %>
     <%= f.input :body, label: 'Update:' %>

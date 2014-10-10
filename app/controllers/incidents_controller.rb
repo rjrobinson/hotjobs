@@ -23,6 +23,7 @@ before_filter :authenticate_user! , except: [ :welcome ]
   def show
     @incident = Incident.find(params[:id])
     @update = Update.new
+    @updates = Update.where(incident_id: params[:id])
   end
 
   def destroy
