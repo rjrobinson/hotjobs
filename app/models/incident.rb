@@ -1,6 +1,7 @@
 class Incident < ActiveRecord::Base
   belongs_to :incident_type
   belongs_to :user
+  has_many :updates, dependent: :destroy
 
   geocoded_by :address
   before_validation :geocode, if: :address_changed?
