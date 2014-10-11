@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
 
   has_many :incidents
   has_many :users
+  has_many :comments
 
 ###########################
       #VALIDATIONS
