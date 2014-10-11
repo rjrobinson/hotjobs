@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   resources :incidents do
     resources :updates
+    resources :comments
   end
 
   resources :users

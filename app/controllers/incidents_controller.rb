@@ -24,15 +24,15 @@ before_filter :authenticate_user! , except: [ :welcome ]
     @incident = Incident.find(params[:id])
     @update = Update.new
     @updates = Update.where(incident_id: params[:id])
+    @comment = Comment.new
+    @comments = Comment.where(incident_id: params[:id])
   end
 
   def destroy
     @incident = Incident.find(params[:id])
     @incident.destroy
-
     flash[:success] = "Incident has been deleted"
-
-    redirect_to root_path
+    redirect_to incident_path
   end
 
 
