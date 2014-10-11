@@ -27,6 +27,7 @@ gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
   gem 'capybara'
+  gem 'dotenv-rails'
   gem 'factory_girl_rails'
   gem 'growl'
   gem 'guard-rspec'
@@ -36,9 +37,10 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rb-fsevent'
   gem 'rspec-rails'
+  gem 'shoulda-matchers'
   gem 'spring-commands-rspec'
   gem 'terminal-notifier-guard'
-  gem 'dotenv-rails'
+  gem 'valid_attribute'
 end
 
 group :development do
@@ -48,4 +50,5 @@ end
 
 group :test do
   gem 'coveralls', require: false
+  gem 'faker'
 end
