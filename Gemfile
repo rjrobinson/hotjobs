@@ -29,6 +29,7 @@ group :development, :test do
   gem 'capybara'
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
+  gem 'faker'
   gem 'growl'
   gem 'guard-rspec'
   gem 'guard-spring'
@@ -50,5 +51,4 @@ end
 
 group :test do
   gem 'coveralls', require: false
-  gem 'faker'
 end
