@@ -48,6 +48,11 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     celluloid (0.16.0)
       timers (~> 4.0.0)
     coderay (1.1.0)
@@ -202,6 +207,7 @@ GEM
     rest-client (1.7.2)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
+    rmagick (2.13.3)
     rspec (3.1.0)
       rspec-core (~> 3.1.0)
       rspec-expectations (~> 3.1.0)
@@ -296,6 +302,7 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-sass (~> 3.2.0)
   capybara
+  carrierwave
   coffee-rails (~> 4.0.0)
   coveralls
   devise
@@ -318,6 +325,7 @@ DEPENDENCIES
   rb-fsevent
   resque
   resque-web
+  rmagick
   rspec-rails
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)

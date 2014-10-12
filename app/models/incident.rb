@@ -1,4 +1,6 @@
 class Incident < ActiveRecord::Base
+  mount_uploader :incident_photos, IncidentPhotosUploader
+
   belongs_to :incident_type
   belongs_to :user
   has_many :updates, dependent: :destroy

@@ -26,27 +26,32 @@
   </div>
 </div>
 <div class="col-md-6 column">
-  <div>
-    <h3>Comments: </h3>
-    <div class='add-comment'>
-    <%= simple_form_for [@incident, @comment] do |f| %>
-      <%= f.input :comment_body, label: 'Comment:' %>
-      <%= f.submit 'Comment', class: 'btn'%>
-    <% end  %>
-    <ul>
-      <% @comments.each do | comment | %>
-          <li><%= comment.comment_body %></li>
-          <li><%= comment.user_id %></li>
-          <li><%= comment.created_at %></li>
-      <% end %>
-    </ul>
-  </div>
-</div>
-	</div>
 	<div class="row clearfix">
+    <h3>Comments: </h3>
+      <div class='add-comment'>
+        <%= simple_form_for [@incident, @comment] do |f| %>
+          <%= f.input :comment_body, label: 'Comment:' %>
+          <%= f.submit 'Comment', class: 'btn'%>
+          <% end  %>
+        <ul>
+          <% @comments.each do | comment | %>
+            <li><%= comment.comment_body %></li>
+            <li><%= comment.user_id %></li>
+            <li><%= comment.created_at %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
 		<div class="col-md-6 column">
+      <h2>MAP GOES HERE</h2>
 		</div>
 		<div class="col-md-6 column">
+      <h3>Add Media</h3>
+      <%= image_tag @incident.incident_photos%>
+      <%= simple_form_for @incident do |f| %>
+      <%= f.input :incident_photos, type: :file, class: 'btn' %>
+      <%= f.submit %>
+      <% end %>
 		</div>
 	</div>
 </div>
