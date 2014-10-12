@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.2.0'
+gem 'carrierwave'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'devise'
 gem 'font-awesome-rails'
@@ -11,14 +12,16 @@ gem 'jquery-rails'
 gem 'omniauth-twitter'
 gem 'pg'
 gem 'rails', '4.1.6'
-gem 'resque'
 gem 'resque-web', require: 'resque_web'
+gem 'resque'
+gem 'rmagick'
 gem 'sass-rails', '~> 4.0.3'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'simple_form'
 gem 'spring',        group: :development
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
+
 
 #######################
 #DEVELOPMENT TEST GEMS#

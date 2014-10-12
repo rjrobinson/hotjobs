@@ -35,6 +35,15 @@ before_filter :authenticate_user! , except: [ :welcome ]
     redirect_to incident_path
   end
 
+  def update
+    @incident = Incident.find(params[:id])
+    
+    if @incident.update(incident_params)
+      redirect_to @incident, notice: 'Incident Updated!'
+    else
+      render @incident, notice: 'There was an error.'
+    end
+  end
 
   def welcome
   end
@@ -45,7 +54,8 @@ before_filter :authenticate_user! , except: [ :welcome ]
     params.require(:incident).permit(
       :address,
       :description,
-      :incident_type_id
+      :incident_type_id,
+      :incident_photos
     )
   end
 
