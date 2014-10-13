@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'omniauth-twitter'
 gem 'pg'
+gem 'rails_12factor', group: :production
 gem 'rails', '4.1.6'
 gem 'resque-web', require: 'resque_web'
 gem 'resque'
