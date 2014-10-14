@@ -1,11 +1,11 @@
-<div class="container">
+<div class="container incident-show">
 	<div class="row clearfix">
-		<div class="col-md-12 column">
-      <ul>
-        <li><%= @incident.description %></li>
-        <li><%= @incident.address %></li>
-        <li><%= @incident.created_at %></li>
-        <li><%= link_to 'Delete', incident_path(@incident), method: :delete, class: 'btn btn-danger' %></li>
+		<div class="col-md-12 column show-index">
+      <ul class='show-description'>
+        <li class='i-title'><%= @incident.description.upcase %></li>
+        <li class='i-address'><%= @incident.address.upcase %></li>
+        <li class ='i-created'><%= @incident.created_at %></li>
+        <%= link_to 'Delete', incident_path(@incident), method: :delete, class: 'btn btn-danger delbtn' %>
       </ul>
 		</div>
     <!--  end of md-12 -->
@@ -31,7 +31,7 @@
       <h3>Add Media</h3>
       <%= image_tag @incident.incident_photos%>
       <%= simple_form_for @incident do |f| %>
-        <%= f.input :incident_photos, type: :file, class: 'btn' %>
+        <%= f.input :incident_photos, type: :file, class: 'btn btn-success imgbtn' %>
         <%= f.submit %>
       <% end %>
     </div>

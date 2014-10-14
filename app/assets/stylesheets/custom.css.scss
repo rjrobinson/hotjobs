@@ -1,3 +1,50 @@
-h1 {
-  background-color: blue;
+body {
+  background-image: image-url("background.png")
+}
+
+.welcome {
+  background-image: image-url('whitep.png');
+}
+
+
+// CURRENT JOBS
+
+.incident-index {
+  background: white;
+  border-radius: 5px;
+}
+
+.description {
+  font-size: 1.5em;
+}
+
+ul li {
+  list-style-type: none
+}
+
+
+.incident-show {
+  color: black;
+}
+
+.show-index {
+  display: inline-block;
+  background: white;
+  border-radius: 5px;
+  color: black;
+}
+.show-description {
+  display: inline-block;
+}
+
+.i-title {
+  font-size: 1.9em;
+}
+
+.delbtn {
+  float: right;
+}
+
+.imgbtn  {
+  color: black;
 }
