@@ -32,12 +32,12 @@ before_filter :authenticate_user! , except: [ :welcome ]
     @incident = Incident.find(params[:id])
     @incident.destroy
     flash[:success] = "Incident has been deleted"
-    redirect_to incident_path
+    redirect_to incidents_path
   end
 
   def update
     @incident = Incident.find(params[:id])
-    
+
     if @incident.update(incident_params)
       redirect_to @incident, notice: 'Incident Updated!'
     else
