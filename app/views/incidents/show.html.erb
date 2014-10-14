@@ -2,7 +2,7 @@
 	<div class="row clearfix">
 		<div class="col-md-12 column show-index">
       <ul class='show-description'>
-        <li class='i-title'><%= @incident.description.upcase %></li>
+        <li class='i-title'><%= @incident.incident_type.name %> : <%= @incident.description.upcase %></li>
         <li class='i-address'><%= @incident.address.upcase %></li>
         <li class ='i-created'><%= @incident.created_at %></li>
         <%= link_to 'Delete', incident_path(@incident), method: :delete, class: 'btn btn-danger delbtn' %>
@@ -15,19 +15,19 @@
       <!--  start of updates -->
       <div class='add-update'>
         <%= simple_form_for [@incident, @update] do |f| %>
-          <%= f.input :body, label: 'Update:' %>
-          <%= f.submit 'Send', class: 'btn'%>
+          <%= f.input :body, label: 'Please enter an update:', class: 'update' %>
+          <%= f.submit 'Send', class: 'btn btn-success'%>
         <% end  %>
       </div>
-      <ul>
+      <ul class='update-ul'>
         <% @updates.each do |update| %>
-          <li class='update-body'><%= update.body %></li>
-          <li class='update-info'>updated snet at:<%= update.created_at %> || by user #<%= update.user_id %></li>
+          <li class='update-body'><%= update.body.upcase %></li>
+          <li class='update-info'>updated sent at:<%= update.created_at %> || by user #<%= update.user_id %></li>
         <% end %>
       </ul>
 		</div>
 		<div class="col-md-6 column">
-      <h1>MAP GOES HERE</h1>
+      <h1>MAPS OFFLINE</h1>
       <h3>Add Media</h3>
       <%= image_tag @incident.incident_photos%>
       <%= simple_form_for @incident do |f| %>

@@ -11,6 +11,7 @@ body {
 
 .incident-index {
   background: white;
+  opacity: 0.4 black;
   border-radius: 5px;
 }
 
@@ -24,7 +25,7 @@ ul li {
 
 
 .incident-show {
-  color: black;
+  color: white;
 }
 
 .show-index {
@@ -41,10 +42,31 @@ ul li {
   font-size: 1.9em;
 }
 
-.delbtn {
-  float: right;
-}
-
 .imgbtn  {
   color: black;
+}
+
+.i-address {
+  font-weight: bold;
+  font-weight: 1.4em;
+}
+//  UPDATE PANEL
+
+.update-body {
+
+}
+
+.add-update {
+  color: white;
+}
+
+.update {
+  color: black;
+}
+.update-ul {
+  display: inline-block;
+}
+
+.update-body {
+  font-size: 2em;
 }
