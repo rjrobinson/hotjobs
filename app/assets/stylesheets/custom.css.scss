@@ -11,7 +11,6 @@ body {
 
 .incident-index {
   background: white;
-  opacity: 0.4 black;
   border-radius: 5px;
 }
 
@@ -25,7 +24,7 @@ ul li {
 
 
 .incident-show {
-  color: white;
+  color: black;
 }
 
 .show-index {
@@ -57,11 +56,11 @@ ul li {
 }
 
 .add-update {
-  color: white;
+  color: black;
 }
 
 .update {
-  color: black;
+  color: white;
 }
 .update-ul {
   display: inline-block;
@@ -69,4 +68,5 @@ ul li {
 
 .update-body {
   font-size: 2em;
+  color: white;
 }

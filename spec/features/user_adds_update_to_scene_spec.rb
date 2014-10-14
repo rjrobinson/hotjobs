@@ -14,7 +14,7 @@ feature 'User can update an incident' do
 
     click_button 'Create Incident'
 
-    fill_in 'Update:', with: 'Sample update information.'
+    fill_in 'Please enter an update:', with: 'Sample update information.'
 
     click_button 'Send'
 
