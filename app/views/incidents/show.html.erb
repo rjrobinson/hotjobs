@@ -1,57 +1,55 @@
-<div class="container">
-  <div class="row clearfix">
-    <div class="col-md-6 column incident-info">
+<div class="row clearfix">
+  <div class="col-md-6 column incident-info">
+    <ul>
+      <li><%= @incident.description %></li>
+      <li><%= @incident.address %></li>
+      <li><%= @incident.created_at %></li>
+    </ul>
+    <div>
+      <%= link_to 'Delete', incident_path(@incident), method: :delete, class: 'btn btn-danger' %>
+      <h3>Updates: </h3>
       <ul>
-        <li><%= @incident.description %></li>
-        <li><%= @incident.address %></li>
-        <li><%= @incident.created_at %></li>
+        <% @updates.each do |update| %>
+          <li class='update-body'><%= update.body %></li>
+          <li class='update-info'>updated snet at:<%= update.created_at %> || by user #<%= update.user_id %></li>
+        <% end %>
       </ul>
-      <div>
-        <%= link_to 'Delete', incident_path(@incident), method: :delete, class: 'btn btn-danger' %>
-        <h3>Updates: </h3>
-        <ul>
-          <% @updates.each do |update| %>
-            <li class='update-body'><%= update.body %></li>
-            <li class='update-info'>updated snet at:<%= update.created_at %> || by user #<%= update.user_id %></li>
-          <% end %>
-        </ul>
-      </div>
-      <div class='add-update'>
-        <%= simple_form_for [@incident, @update] do |f| %>
-          <%= f.input :body, label: 'Update:' %>
-          <%= f.submit 'Send', class: 'btn'%>
-        <% end  %>
-      </div>
+    </div>
+    <div class='add-update'>
+      <%= simple_form_for [@incident, @update] do |f| %>
+        <%= f.input :body, label: 'Update:' %>
+        <%= f.submit 'Send', class: 'btn'%>
+      <% end  %>
     </div>
   </div>
 </div>
+</div>
 <div class="col-md-6 column">
-	<div class="row clearfix">
-    <h3>Comments: </h3>
-      <div class='add-comment'>
-        <%= simple_form_for [@incident, @comment] do |f| %>
-          <%= f.input :comment_body, label: 'Comment:' %>
-          <%= f.submit 'Comment', class: 'btn'%>
-          <% end  %>
-        <ul>
-          <% @comments.each do | comment | %>
-            <li><%= comment.comment_body %></li>
-            <li><%= comment.user_id %></li>
-            <li><%= comment.created_at %></li>
-          <% end %>
-        </ul>
-      </div>
+<div class="row clearfix">
+  <h3>Comments: </h3>
+    <div class='add-comment'>
+      <%= simple_form_for [@incident, @comment] do |f| %>
+        <%= f.input :comment_body, label: 'Comment:' %>
+        <%= f.submit 'Comment', class: 'btn'%>
+        <% end  %>
+      <ul>
+        <% @comments.each do | comment | %>
+          <li><%= comment.comment_body %></li>
+          <li><%= comment.user_id %></li>
+          <li><%= comment.created_at %></li>
+        <% end %>
+      </ul>
     </div>
-		<div class="col-md-6 column">
-      <h2>MAP GOES HERE</h2>
-		</div>
-		<div class="col-md-6 column">
-      <h3>Add Media</h3>
-      <%= image_tag @incident.incident_photos%>
-      <%= simple_form_for @incident do |f| %>
-      <%= f.input :incident_photos, type: :file, class: 'btn' %>
-      <%= f.submit %>
-      <% end %>
-		</div>
+  </div>
+	<div class="col-md-6 column">
+    <h2>MAP GOES HERE</h2>
+	</div>
+	<div class="col-md-6 column">
+    <h3>Add Media</h3>
+    <%= image_tag @incident.incident_photos%>
+    <%= simple_form_for @incident do |f| %>
+    <%= f.input :incident_photos, type: :file, class: 'btn' %>
+    <%= f.submit %>
+    <% end %>
 	</div>
 </div>

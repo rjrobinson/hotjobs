@@ -1,7 +1,1 @@
-<div>
-<% flash.each do | name, msg | %>
-  <div class="alert alert-<%= name == :notice ? 'success' : 'error' %>">
-    <%= msg %>
-  </div>
-<% end %>
-</div>
+<%= bootstrap_flash %>
