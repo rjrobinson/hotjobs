@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/rjrobinson/Hot_Jobs.svg?branch=master)](https://travis-ci.org/rjrobinson/Hot_Jobs) [![Code Climate](https://codeclimate.com/github/rjrobinson/Hot_Jobs.png)](https://codeclimate.com/github/rjrobinson/Hot_Jobs) [![Coverage Status](https://coveralls.io/repos/rjrobinson/Hot_Jobs/badge.png)](https://coveralls.io/r/rjrobinson/Hot_Jobs)
 
-[sitrepapp.herokuapp.com](sitrepapp.herokuapp.com)
+[sitrepapp.herokuapp.com](http://sitrepapp.herokuapp.com)
 == README
 ###SITREP
 SITREP is a web app that allows First Responders to report, update, and comment  
