@@ -2,7 +2,7 @@ class IncidentsController < ApplicationController
 before_filter :authenticate_user! , except: [ :welcome ]
 
   def index
-    @incidents = Incident.all
+    @incidents = Incident.all.order(created_at: :desc)
   end
 
   def new
