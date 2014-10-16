@@ -39,7 +39,7 @@
 						{
 							"lat": <%= @incident.latitude %>,
 							"lng": <%= @incident.longitude %>,
-							"infowindow": 'Hello'
+							"infowindow": "<%= @incident.description.to_s %>"
 						}
 						]);
 						handler.bounds.extendWith(markers);

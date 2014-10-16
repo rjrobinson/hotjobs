@@ -6,3 +6,4 @@
     <li><%= link_to incident.address.upcase, incident_path(incident)%> - <%= link_to incident.created_at, incident_path(incident) %></li>
   </ul>
 <% end %>
+<%= render 'incidents/main_map' %>
