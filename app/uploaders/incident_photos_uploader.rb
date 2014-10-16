@@ -17,6 +17,6 @@ class IncidentPhotosUploader < CarrierWave::Uploader::Base
   end
 
   def default_url
-    'http://lorempixel.com/400/200/'
+    "http://lorempixel.com/400/200/"
   end
 end

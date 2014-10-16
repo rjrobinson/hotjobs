@@ -1,6 +1,5 @@
 class IncidentsController < ApplicationController
-before_filter :authenticate_user! , except: [ :welcome ]
-
+  before_filter :authenticate_user!, except: [:welcome]
   def index
     @incidents = Incident.all.order(created_at: :desc)
   end
@@ -12,11 +11,10 @@ before_filter :authenticate_user! , except: [ :welcome ]
   def create
     @incident = Incident.new(incident_params)
     @incident.user = current_user
-
     if @incident.save
-      redirect_to @incident, notice: 'Incident Added!'
+      redirect_to @incident, notice: "Incident Added!"
     else
-      render :new, notice: 'There was an error.'
+      render :new, notice: "There was an error."
     end
   end
 
@@ -37,11 +35,10 @@ before_filter :authenticate_user! , except: [ :welcome ]
 
   def update
     @incident = Incident.find(params[:id])
-
     if @incident.update(incident_params)
-      redirect_to @incident, notice: 'Incident Updated!'
+      redirect_to @incident, notice: "Incident Updated!"
     else
-      render @incident, notice: 'There was an error.'
+      render @incident, notice: "There was an error."
     end
   end
 
@@ -58,5 +55,4 @@ before_filter :authenticate_user! , except: [ :welcome ]
       :incident_photos
     )
   end
-
 end

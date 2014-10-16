@@ -9,26 +9,15 @@ class User < ActiveRecord::Base
   has_many :users
   has_many :comments
 
-###########################
-      #VALIDATIONS
-###########################
-
   validates :email, uniqueness: true
-
-
-
-###########################
-      #MODEL METHODS
-###########################
-
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create
   end
 
   def self.new_with_session(params, session)
-    if session['devise.user_attributes']
-      new(session['devise.user_attributes'], without_protection: true) do | user |
+    if session["devise.user_attributes"]
+      new(session["devise.user_attributes"], without_protection: true) do |user|
         user.attributes = params
         user.valid?
       end
