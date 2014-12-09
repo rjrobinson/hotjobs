@@ -2,7 +2,8 @@ class IncidentsController < ApplicationController
   before_filter :authenticate_user!, except: [:welcome]
   def index
     @incidents = Incident.all.order(created_at: :desc)
-    @map_incidents = Incident.all.order(:created_at).limit(20)
+    @map_incidents = Incident.al
+    l.order(:created_at).limit(20)
     @hash = Gmaps4rails.build_markers(@map_incidents) do |incident, marker|
       marker.lat incident.latitude
       marker.lng incident.longitude
