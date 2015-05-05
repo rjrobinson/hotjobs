@@ -8,14 +8,16 @@ gem 'devise'
 gem 'fog'
 gem 'font-awesome-rails'
 gem 'geocoder'
+gem 'gmaps4rails'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'omniauth-twitter'
 gem 'pg'
-gem 'rails_12factor', group: :production
+gem 'puma'
 gem 'rails', '4.1.6'
-gem 'resque-web', require: 'resque_web'
+gem 'rails_12factor', group: :production
 gem 'resque'
+gem 'resque-web', require: 'resque_web'
 gem 'rmagick'
 gem 'sass-rails', '~> 4.0.3'
 gem 'sdoc', '~> 0.4.0',          group: :doc
@@ -23,7 +25,6 @@ gem 'simple_form'
 gem 'spring',        group: :development
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
-gem 'gmaps4rails'
 
 
 #######################

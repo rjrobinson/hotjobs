@@ -2,8 +2,7 @@ class IncidentsController < ApplicationController
   before_filter :authenticate_user!, except: [:welcome]
   def index
     @incidents = Incident.all.order(created_at: :desc)
-    @map_incidents = Incident.al
-    l.order(:created_at).limit(20)
+    @map_incidents = Incident.all.order(:created_at).limit(20)
     @hash = Gmaps4rails.build_markers(@map_incidents) do |incident, marker|
       marker.lat incident.latitude
       marker.lng incident.longitude
@@ -37,6 +36,7 @@ class IncidentsController < ApplicationController
   def destroy
     @incident = Incident.find(params[:id])
     @incident.destroy
+
     flash[:success] = "Incident has been deleted"
     redirect_to incidents_path
   end
