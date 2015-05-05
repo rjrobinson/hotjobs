@@ -33,6 +33,7 @@ class IncidentsController < ApplicationController
     @comments = Comment.where(incident_id: params[:id])
   end
 
+
   def destroy
     @incident = Incident.find(params[:id])
     @incident.destroy
