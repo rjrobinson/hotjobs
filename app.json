@@ -1,0 +1,37 @@
+{
+  "name":"hotjobs",
+  "description":"",
+  "scripts":{},
+  "env":{
+    "AWS_ACCESS_KEY_ID":{
+      "required":true
+    },
+    "AWS_SECRET_ACCESS_KEY":{
+      "required":true
+    },
+    "LANG":{
+      "required":true
+    },
+    "RACK_ENV":{
+      "required":true
+    },
+    "RAILS_ENV":{
+      "required":true
+    },
+    "S3_BUCKET":{
+      "required":true
+    },
+    "SECRET_KEY_BASE":{
+      "required":true
+    },
+    "TWITTER_CONSUMER_KEY":{
+      "required":true
+    },
+    "TWITTER_CONSUMER_SECRET":{
+      "required":true
+    }
+  },
+  "addons":[
+    "heroku-postgresql"
+  ]
+}
