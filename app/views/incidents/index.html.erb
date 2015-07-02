@@ -7,23 +7,23 @@
     <% @incidents.each do | incident | %>
       <ul class='incident-index'>
         <li><%= link_to incident.description.upcase, incident_path(incident), class: 'description' %>
-        <li><%= link_to incident.address.upcase, incident_path(incident)%> - <%= link_to incident.created_at, incident_path(incident) %></li>
-      </ul>
-    <% end %>
-  </div>
-  <div class="col-md-8 column">
-    <div style='width: 700px;'>
-      <div id="map" style='width: 700px; height: 400px;'>
-      <script type="text/javascript">
-        handler = Gmaps.build('Google');
-        handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-        markers = handler.addMarkers(<%=raw @hash.to_json %>);
-          handler.bounds.extendWith(markers);
-          handler.fitMapToBounds();
-          handler.getMap().setZoom(4);
-        });
-        </script>
+          <li><%= link_to incident.address.upcase, incident_path(incident)%> - <%= link_to incident.created_at, incident_path(incident) %></li>
+        </ul>
+      <% end %>
+    </div>
+    <div class="col-md-8 column">
+      <div style='width: 700px;'>
+        <div id="map" style='width: 700px; height: 400px;'>
+          <script type="text/javascript">
+            handler = Gmaps.build('Google');
+            handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+            markers = handler.addMarkers(<%=raw @hash.to_json %>);
+              handler.bounds.extendWith(markers);
+              handler.fitMapToBounds();
+              handler.getMap().setZoom(4);
+            });
+          </script>
+        </div>
       </div>
     </div>
   </div>
-</div>
