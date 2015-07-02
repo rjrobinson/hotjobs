@@ -33,29 +33,31 @@ gem 'uglifier', '>= 1.3.0'
 
 
 group :development, :test do
-  gem 'capybara'
-  gem 'dotenv-rails'
-  gem 'factory_girl_rails'
-  gem 'faker'
-  gem 'growl'
-  gem 'guard-rspec'
-  gem 'guard-spring'
-  gem 'launchy'
-  gem 'meta_request'
-  gem 'pry-rails'
-  gem 'rb-fsevent'
-  gem 'rspec-rails'
-  gem 'shoulda-matchers'
-  gem 'spring-commands-rspec'
-  gem 'terminal-notifier-guard'
-  gem 'valid_attribute'
+	gem 'capybara'
+	gem 'dotenv-rails'
+	gem 'factory_girl_rails'
+	gem 'faker'
+	gem 'growl'
+	gem 'guard-rspec'
+	gem 'guard-spring'
+	gem 'launchy'
+	gem 'meta_request'
+	gem 'pry-rails'
+	gem 'rb-fsevent'
+	gem 'rspec-rails'
+	gem 'shoulda-matchers'
+	gem 'spring-commands-rspec'
+	gem 'terminal-notifier-guard'
+	gem 'valid_attribute'
 end
 
 group :development do
-  gem 'better_errors'
-  gem 'binding_of_caller'
+	gem 'better_errors'
+	gem 'binding_of_caller'
 end
 
-group :test do
-  gem 'coveralls', require: false
-end
+# group :test do
+#   gem 'coveralls', require: false
+# end
+
+gem "codeclimate-test-reporter", group: :test, require: nil
