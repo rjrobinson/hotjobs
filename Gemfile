@@ -39,7 +39,6 @@ group :development, :test do
 	gem 'faker'
 	gem 'growl'
 	gem 'guard-rspec'
-	gem 'guard-spring'
 	gem 'launchy'
 	gem 'meta_request'
 	gem 'pry-rails'
