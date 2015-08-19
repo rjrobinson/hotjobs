@@ -7,8 +7,8 @@ Rails.application.routes.draw do
 	root 'incidents#welcome'
 
 	resources :incidents do
-		resources :updates
-		resources :comments
+		resources :updates, , only: [:new, :show, :edit]
+		resources :comments, only: [:new, :show, :edit]
 	end
 
 	resources :users
