@@ -27,6 +27,14 @@ gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
 
+####################
+# CODE SHIP TEST
+
+
+
+
+
+
 #######################
 #DEVELOPMENT TEST GEMS#
 #######################
